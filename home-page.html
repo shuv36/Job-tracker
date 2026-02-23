@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+
+    <!-- tailwindcss src  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+
+    <!-- daisy  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class=" lg:container mx-auto mb-[12px]">
+
+    <section class=" grid justify-center">
+
+        <div>
+
+            <H1 class="text-black font-bold text-[20px] mb-2 ">Job Application Tracker</H1>
+
+            <div class="dasbord lg:flex gap-5">
+                <div class=" shadow pr-60  p-4">
+                    <p class="text-sm pb-1">Total</p>
+                    <h2>8</h2>
+                </div>
+                <div class="shadow pr-60  p-4">
+                    <p class="text-sm pb-1">Interview</p>
+                    <h2 class="text-green-400">0</h2>
+                </div>
+                <div class="shadow pr-60 p-4">
+                    <p class="text-sm pb-1">Rejected</p>
+                    <h2 class="text-red-500">0</h2>
+                </div>
+
+            </div>
+            <hr class="mt-5 mb-5 opacity-10">
+        </div>
+
+
+
+
+        <div class="flex justify-between">
+            <h2 class="text-3px font-bold">Available Jobs</h2>
+            <p class="text-[12px]"> 0 Jobs</p>
+        </div>
+
+        <div class="flex gap-2 mt-5 mb-5">
+            <a class="px-4 rounded text-[12px] text-white bg-[#] inline-block bg-[#3B82F6]" href="./index.html">All</a>
+            
+            <h2 class="px-4 rounded text-[12px] shadow">Interview</h2>
+            <h2 class="px-4 rounded text-[12px] shadow">Rejected</h2>
+        </div>
+
+        <div class="p-25 shadow grid justify-center ">
+            <img class=" lg:ml-25 " src="./jobs.png" alt="">
+            <h2 class="text-[20px] font-bold  lg:grid justify-center ">No jobs available</h2>
+            <p class="text-gray-500">Check back soon for new job opportunities</p>
+        </div>
