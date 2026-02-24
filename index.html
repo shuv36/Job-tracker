@@ -8,15 +8,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 </head>
 
 <body class="lg:container mx-auto mb-[12px]">
 
-    <section class="grid justify-center">
+    <section class="grid justify-center ">
 
-        <div>
+        <div class="grid lg:justify-center">
             <h1 class="text-black font-bold text-[20px] mb-2">Job Application Tracker</h1>
 
             <div class="dasbord lg:flex gap-5">
@@ -38,15 +37,15 @@
         </div>
 
         <div class="flex justify-between">
-            <h2 class="text-3px font-bold">Available Jobs</h2>
-            <p class="text-[12px]"><span id="jobsShown">8</span> Jobs</p>
+            <h2 class="text-3px font-bold mt-5">Available Jobs</h2>
+            <p class="text-[12px] mt-6"><span id="jobsShown">8</span> Jobs</p>
         </div>
 
         <div class="flex gap-2 mt-5 mb-5">
             <h2 class="px-4 py-1.5 rounded text-[12px] text-white bg-[#3B82F6] filter" data-filter="all">All</h2>
 
             <a class="px-4 py-1.5 rounded text-[12px] shadow hover:bg-[#3B82F6] filter" data-filter="Interview"
-                href="./home-page.html">Interview</a>
+                href="#">Interview</a>
 
             <a class="px-4 py-1.5 rounded text-[12px] shadow hover:bg-[#3B82F6] filter" data-filter="Rejected"
                 href="#">Rejected</a>
@@ -54,14 +53,123 @@
 
         <div class="mainContainer grid gap-5">
 
-          <!-- card onr  -->
             <div class="flex justify-between shadow p-5 rounded-lg job-card" data-status="Not Applied">
                 <div>
                     <h1 class="font-bold mb-2">Mobile First Corp</h1>
                     <p class="text-gray-500">React Native Developer</p>
                     <p class="text-gray-500 my-4">Remote • Full-time • $130,000 - $175,000</p>
 
-                    <button class="btn px-15 status inline-flex whitespace-nowrap">Not Applied</button>
+                    <button class="btn px-15 status" style="white-space: nowrap;">Not Applied</button>
+
+                    <p class="my-3">Build cross-platform mobile applications using React Native.</p>
+
+                    <button onclick="setInterview(this)" class="btn border-green-500 text-green-500 hover:bg-green-100 ">INTERVIEW</button>
+                    <button onclick="setRejected(this)" class="btn border-red-500 text-red-500 hover:bg-red-100">REJECTED</button>
+                </div>
+
+               
+                <div>
+                    <img onclick="deleteCard(this)"
+                        class="border max-w-[32px] p-2 rounded-full border-gray-500 cursor-pointer"
+                        src="./Vector (1).png">
+                </div>
+            </div>
+            <div class="flex justify-between shadow p-5 rounded-lg job-card" data-status="Not Applied">
+                <div>
+                    <h1 class="font-bold mb-2">WebFlow Agency</h1>
+                    <p class="text-gray-500">Web Designer & Developer</p>
+                    <p class="text-gray-500 my-4">Los Angeles, CA
+                        •Part-time•$80,000 - $120,000</p>
+                    <button class="btn px-15 status" style="white-space: nowrap;">Not Applied</button>
+
+                    <p class="my-3">Create stunning web experiences for high-profile clients. Must have portfolio and
+                        experience with modern web design trends.</p>
+
+                    <button onclick="setInterview(this)" class="btn border-green-500 text-green-500 hover:bg-green-100">INTERVIEW</button>
+                    <button onclick="setRejected(this)" class="btn border-red-500 text-red-500 hover:bg-red-100 ">REJECTED</button>
+                </div>
+
+                <!-- image deted button -->
+                <div>
+                    <img onclick="deleteCard(this)"
+                        class="border max-w-[32px] p-2 rounded-full border-gray-500 cursor-pointer"
+                        src="./Vector (1).png">
+                </div>
+            </div>
+            <div class="flex justify-between shadow p-5 rounded-lg job-card" data-status="Not Applied">
+                <div>
+                    <h1 class="font-bold mb-2">DataViz Solutions</h1>
+                    <p class="text-gray-500">Data Visualization Specialist</p>
+                    <p class="text-gray-500 my-4">Boston, MA
+                        •Full-time •$125,000 - $165,000</p>
+                    <button class="btn px-15 status" style="white-space: nowrap;">Not Applied</button>
+
+                    <p class="my-3">Transform complex data into compelling visualizations. Required skills: D3.js,
+                        React, and strong analytical thinking.
+                    </p>
+
+                    <button onclick="setInterview(this)" class="btn border-green-500 text-green-500 hover:bg-green-100">INTERVIEW</button>
+                    <button onclick="setRejected(this)" class="btn border-red-500 text-red-500 hover:bg-red-100 ">REJECTED</button>
+                </div>
+
+                <!-- image deted button -->
+                <div>
+                    <img onclick="deleteCard(this)"
+                        class="border max-w-[32px] p-2 rounded-full border-gray-500 cursor-pointer"
+                        src="./Vector (1).png">
+                </div>
+            </div>
+            <div class="flex justify-between shadow p-5 rounded-lg job-card" data-status="Not Applied">
+                <div>
+                    <h1 class="font-bold mb-2">CloudFirst Inc</h1>
+                    <p class="text-gray-500">Backend Developer</p>
+                    <p class="text-gray-500 my-4">Seattle, WA •Full-time •$140,000 - $190,000</p>
+
+                    <button class="btn px-15 status" style="white-space: nowrap;">Not Applied</button>
+
+                    <p class="my-3">Design and maintain scalable backend systems using Python and AWS. Work with modern
+                        DevOps practices and cloud infrastructure.</p>
+
+                    <button onclick="setInterview(this)" class="btn border-green-500 text-green-500 hover:bg-green-100 ">INTERVIEW</button>
+                    <button onclick="setRejected(this)" class="btn border-red-500 text-red-500 hover:bg-red-100 ">REJECTED</button>
+                </div>
+
+                <!-- image deted button -->
+                <div>
+                    <img onclick="deleteCard(this)"
+                        class="border max-w-[32px] p-2 rounded-full border-gray-500 cursor-pointer"
+                        src="./Vector (1).png">
+                </div>
+            </div>
+            <div class="flex justify-between shadow p-5 rounded-lg job-card" data-status="Not Applied">
+                <div>
+                    <h1 class="font-bold mb-2">Innovation Labs</h1>
+                    <p class="text-gray-500">UI/UX Engineer</p>
+                    <p class="text-gray-500 my-4">Austin, TX • Full-time • $110,000 - $150,000</p>
+
+                    <button class="btn px-15 status" style="white-space: nowrap;">Not Applied</button>
+
+                    <p class="my-3">Create beautiful and functional user interfaces for our suite of products. Strong
+                        design skills and frontend development expertise required.</p>
+
+                    <button onclick="setInterview(this)" class="btn  border-green-500 hover:bg-green-100 text-green-500">INTERVIEW</button>
+                    <button onclick="setRejected(this)" class="btn border-red-500 text-red-500 hover:bg-red-100">REJECTED</button>
+                </div>
+
+                <!-- image deted button -->
+                <div>
+                    <img onclick="deleteCard(this)"
+                        class="border max-w-[32px] p-2 rounded-full border-gray-500 cursor-pointer"
+                        src="./Vector (1).png">
+                </div>
+            </div>
+            <div class="flex justify-between shadow p-5 rounded-lg job-card" data-status="Not Applied">
+                <div>
+                    <h1 class="font-bold mb-2">MegaCorp Solutions</h1>
+                    <p class="text-gray-500">JavaScript Developer</p>
+                    <p class="text-gray-500 my-4">Remote • Full-time • $130,000 - $175,000</p>
+
+                    <button class="btn px-15 status" style="white-space: nowrap;">Not Applied</button>
 
                     <p class="my-3">Build cross-platform mobile applications using React Native.</p>
 
@@ -69,12 +177,57 @@
                     <button onclick="setRejected(this)" class="btn border-red-500 text-red-500">REJECTED</button>
                 </div>
 
-
+                 <!-- image deted button -->
                 <div>
-                    <img onclick="deleteCard(this)" src="./Vector (1).png" class="cursor-pointer border border-gray-400 p-1 rounded-full">
+                    <img onclick="deleteCard(this)"
+                        class="border max-w-[32px] p-2 rounded-full border-gray-500 cursor-pointer"
+                        src="./Vector (1).png">
+                </div>
+            </div>
+            <div class="flex justify-between shadow p-5 rounded-lg job-card" data-status="Not Applied">
+                <div>
+                    <h1 class="font-bold mb-2">StartupXYZ</h1>
+                    <p class="text-gray-500">Full Stack Engineer</p>
+                    <p class="text-gray-500 my-4">Remote • Full-time • $130,000 - $175,000</p>
+
+                    <button class="btn px-15 status" style="white-space: nowrap;">Not Applied</button>
+
+                    <p class="my-3">Build cross-platform mobile applications using React Native.</p>
+
+                    <button onclick="setInterview(this)" class="btn border-green-500 text-green-500">INTERVIEW</button>
+                    <button onclick="setRejected(this)" class="btn border-red-500 text-red-500">REJECTED</button>
+                </div>
+
+                <!-- image deted button -->
+                <div>
+                    <img onclick="deleteCard(this)"
+                        class="border max-w-[32px] p-2 rounded-full border-gray-500 cursor-pointer"
+                        src="./Vector (1).png">
+                </div>
+            </div>
+            <div class="flex justify-between shadow p-5 rounded-lg job-card" data-status="Not Applied">
+                <div>
+                    <h1 class="font-bold mb-2">TechCorp Industries</h1>
+                    <p class="text-gray-500">Senior Frontend Developer</p>
+                    <p class="text-gray-500 my-4">Remote • Full-time • $130,000 - $175,000</p>
+
+                    <button class="btn px-15 status" style="white-space: nowrap;">Not Applied</button>
+
+                    <p class="my-3">Build cross-platform mobile applications using React Native.</p>
+
+                    <button onclick="setInterview(this)" class="btn border-green-500 text-green-500">INTERVIEW</button>
+                    <button onclick="setRejected(this)" class="btn border-red-500 text-red-500">REJECTED</button>
+                </div>
+
+               <!-- image deted button -->
+                <div>
+                    <img onclick="deleteCard(this)"
+                        class="border max-w-[32px] p-2 rounded-full border-gray-500 cursor-pointer"
+                        src="./Vector (1).png">
                 </div>
             </div>
 
+            
 
         </div>
 
